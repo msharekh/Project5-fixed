@@ -19,6 +19,8 @@ let account;
 
 const createStar = async () => {
   const instance = await StarNotary.deployed();
+  web3.eth.getGasPrice().then(console.log);
+  web3.eth.getAccounts().then(console.log);
   const name = document.getElementById('starName').value;
   const id = document.getElementById('starId').value;
 
