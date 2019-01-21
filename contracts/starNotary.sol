@@ -88,17 +88,7 @@ contract StarNotary is ERC721 {
 
 
 
-/* 
-1) User 1 puts his/her star for sale
-2) User 2 puts his/her star for sale
-3) User 1 calls the function exchangeStars, to get the star 
-from User 2 that is on sale, in exchange of his/her star that is on sale
-The user 1 provides the following parameters to exchangeStars: 
-id token star for sale user 1, id token star for sale user 2
 
-You just exchange 1 star from user1 and 1 star from user2
-Just verify that the owner of _tokenId1 is the one executing the function
- *///
 
 // Write a function to Transfer a Star. The function should transfer a star from the address of the caller.
 // The function should accept 2 arguments, the address to transfer the star to, and the token ID of the star.
