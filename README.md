@@ -1,6 +1,3 @@
-Your 
-Your ERC-721 Token Symbol
-Your “Token Address” on the Rinkeby Network
 
 
 # Project5 - Decentralized Star Notary
