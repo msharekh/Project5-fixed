@@ -79,15 +79,15 @@ it('lets user2 buy a star and decreases its balance in ether', async () => {
 
 // 1) The token name and token symbol are added properly.
 it('can set name and set symbol', async () => {
-  let name = 'DApp Star';
-  let symbol = 'ABC';
+  let name = 'Mishal Star';
+  let symbol = 'MSH';
   await instance.setName(name);
   assert(name, await instance.name());
   await instance.setSymbol(symbol);
   assert(symbol, await instance.symbol());
 });
 // 2) 2 users can exchange their stars.
-/* it('2 users can exchange their stars', async () => {
+it('2 users can exchange their stars', async () => {
   //user 1 create and put for sale
   let user1 = accounts[1];
   let starId1 = 1;
@@ -109,20 +109,20 @@ it('can set name and set symbol', async () => {
 
   assert.equal(user1, await instance.ownerOf(starId2));
   assert.equal(user2, await instance.ownerOf(starId1));
-}); */
+});
 
 // 3) Stars Tokens can be transferred from one address to another.
-it('transfer token from one user to another', async () => {
-  let user5 = accounts[5];
-  let starId = 10;
-  await instance.createStar('awesome star', starId, { from: accounts[0] });
-  await instance.transferStar(user5, starId, { from: accounts[0] });
-  assert.equal(user5, await instance.ownerOf(starId));
-});
+// it('transfer token from one user to another', async () => {
+//   let user5 = accounts[5];
+//   let starId = 10;
+//   await instance.createStar('awesome star', starId, { from: accounts[0] });
+//   await instance.transferStar(user5, starId, { from: accounts[0] });
+//   assert.equal(user5, await instance.ownerOf(starId));
+// });
 
-it('Lookup a star by ID using lookUptokenIdToStarInfo function', async () => {
-  let name = 'ABC';
-  let starId = 10;
-  await instance.createStar(name, starId, { from: accounts[0] });
-  assert.equal(name, await instance.lookUptokenIdToStarInfo(starId));
-});
+// it('Lookup a star by ID using lookUptokenIdToStarInfo function', async () => {
+//   let name = 'ABC';
+//   let starId = 10;
+//   await instance.createStar(name, starId, { from: accounts[0] });
+//   assert.equal(name, await instance.lookUptokenIdToStarInfo(starId));
+// });
