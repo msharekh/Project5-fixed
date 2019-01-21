@@ -117,6 +117,12 @@ it('transfer token from one user to another', async () => {
   let starId = 10;
   await instance.createStar('awesome star', starId, { from: accounts[0] });
   await instance.transferStar(user5, starId, { from: accounts[0] });
-
   assert.equal(user5, await instance.ownerOf(starId));
+});
+
+it('Lookup a star by ID using lookUptokenIdToStarInfo function', async () => {
+  let name = 'ABC';
+  let starId = 10;
+  await instance.createStar(name, starId, { from: accounts[0] });
+  assert.equal(name, await instance.lookUptokenIdToStarInfo(starId));
 });

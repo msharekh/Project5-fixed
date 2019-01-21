@@ -2,32 +2,62 @@
 <html>
 <head>
   <title>StarNotary DAPP Front End</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <script src="./app.js"></script>
 </head>
 <body>
   <h1>StarNotary Token DAPP</h1>
 
-  <hr>
+  
+  <div class="panel panel-primary">
+    <div class="panel-heading">    
+      <h3>Create a Star</h1>
+    </div>
+    <div class="panel-body">
+      <div class="form-group">
+         <label for="starName">Star Name:</label><input type="text" class="form-control" id="starName"></input>
+    <label for="starId">Star ID:</label>
+    <input type="text" class="form-control" id="starId"></input>
+      </div>
+       
+    <button id="createStar" onclick="App.createStar()" class="btn btn-default">Create Star</button>
+    </div>
+  </div>
 
-  <br>
-    <h1>Create a Star</h1>
-    <br><label for="starName">Star Name:</label><input type="text" id="starName"></input>
-    <br><label for="starId">Star ID:</label><input type="text" id="starId"></input>
-    <br><br><button id="createStar" onclick="App.createStar()">Create Star</button>
-    <br><br>
-    <br>
 
-    <h1>Lookup a star by ID</h1>
-     <br><label for="starId">Star ID:</label><input type="text" id="starId"></input>
-    <br><br><button id="LookupStarByID" onclick="App.LookupStarByID()">Lookup Star</button>
-    <br><br>
-    <br>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3>Lookup a star by ID</h1>
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+        <label for="lookupStarId">Star ID:</label>
+        <input type="text" class="form-control" id="lookupStarId"></input>
+      </div>
+        <button id="LookupStarByID" onclick="App.LookupStarByID()" class="btn btn-default">Lookup Star</button>
+    </div>
+  </div>
 
-    <span id="status"></span>
+
+  
+  
+    
+    
+
+    
+    
+    
+<div class="well">
+      <span id="status"></span>
+</div>
 
 <!--Add an input box and a button to Lookup a star by ID using tokenIdToStarInfo-->
 
-    <br>
+    
 </body>
 </html>
