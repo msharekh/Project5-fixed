@@ -12,7 +12,7 @@ This application is build usijng solidity, Truffle , web3
 
 ## Download project
 ```
-git clone https://github.com/msharekh/Project5
+git clone https://github.com/msharekh/Project5-fixed.git
 
 ```
 
