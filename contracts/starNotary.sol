@@ -87,6 +87,9 @@ contract StarNotary is ERC721 {
         _removeTokenFrom(user2, _tokenId2);
         _addTokenTo( user1, _tokenId2);
 
+        require(_checkOnERC721Received(user1, user2, _tokenId1, ""));
+        require(_checkOnERC721Received(user2, user1, _tokenId1, ""));
+
     }
 
 
