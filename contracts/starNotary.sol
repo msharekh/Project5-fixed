@@ -9,8 +9,12 @@ contract StarNotary is ERC721 {
     }
 
 //  Add a name and a symbol for your starNotary tokens
-    string public name;
-    string public symbol;
+
+// #### ERC-721 Token Name: MSH StarNotary 
+// #### ERC-721 Token Symbol: MSH
+
+    string public  name = "MSH StarNotary";
+    string public  symbol ="MSH";
 
     function setName(string _name) public{
         name = _name;
@@ -70,10 +74,8 @@ contract StarNotary is ERC721 {
 
         // 1) User 1 puts his/her star for sale
         
-        // putStarUpForSale( _tokenId1,  _price);
 
         // 2) User 2 puts his/her star for sale
-        // putStarUpForSale( _tokenId1,  _price);
 
         // 3) User 1 calls the function exchangeStars, to get the star 
         address user1 = ownerOf(_tokenId1);
@@ -84,6 +86,8 @@ contract StarNotary is ERC721 {
         _addTokenTo( user2, _tokenId1);
         _removeTokenFrom(user2, _tokenId2);
         _addTokenTo( user1, _tokenId2);
+
+        //safeTransferFrom is recomended
     }
 
 
