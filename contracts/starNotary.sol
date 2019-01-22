@@ -87,7 +87,6 @@ contract StarNotary is ERC721 {
         _removeTokenFrom(user2, _tokenId2);
         _addTokenTo( user1, _tokenId2);
 
-        //safeTransferFrom is recomended
     }
 
 
