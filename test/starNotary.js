@@ -40,7 +40,7 @@ it('lets user1 get the funds after the sale', async () => {
     balanceOfUser1BeforeTransaction.add(starPrice).toNumber(),
     balanceOfUser1AfterTransaction.toNumber()
   );
-});
+}).timeout(10000);
 
 it('lets user2 buy a star, if it is put up for sale', async () => {
   let user1 = accounts[1];
@@ -52,7 +52,7 @@ it('lets user2 buy a star, if it is put up for sale', async () => {
   let balanceOfUser1BeforeTransaction = web3.eth.getBalance(user2);
   await instance.buyStar(starId, { from: user2, value: starPrice });
   assert.equal(await instance.ownerOf.call(starId), user2);
-});
+}).timeout(10000);
 
 it('lets user2 buy a star and decreases its balance in ether', async () => {
   let user1 = accounts[1];
@@ -73,7 +73,7 @@ it('lets user2 buy a star and decreases its balance in ether', async () => {
     balanceOfUser2BeforeTransaction.sub(balanceAfterUser2BuysStar),
     starPrice
   );
-});
+}).timeout(10000);
 
 // Write Tests for:
 
@@ -85,7 +85,7 @@ it('can set name and set symbol', async () => {
   assert(name, await instance.name());
   await instance.setSymbol(symbol);
   assert(symbol, await instance.symbol());
-});
+}).timeout(10000);
 // 2) 2 users can exchange their stars.
 it('2 users can exchange their stars', async () => {
   //user 1 create and put for sale
@@ -109,7 +109,7 @@ it('2 users can exchange their stars', async () => {
 
   assert.equal(user1, await instance.ownerOf(starId2));
   assert.equal(user2, await instance.ownerOf(starId1));
-});
+}).timeout(10000);
 
 // 3) Stars Tokens can be transferred from one address to another.
 it('transfer token from one user to another', async () => {
@@ -118,11 +118,11 @@ it('transfer token from one user to another', async () => {
   await instance.createStar('awesome star', starId, { from: accounts[0] });
   await instance.transferStar(user5, starId, { from: accounts[0] });
   assert.equal(user5, await instance.ownerOf(starId));
-});
+}).timeout(10000);
 
 it('Lookup a star by ID using lookUptokenIdToStarInfo function', async () => {
   let name = 'ABC';
   let starId = 10;
   await instance.createStar(name, starId, { from: accounts[0] });
   assert.equal(name, await instance.lookUptokenIdToStarInfo(starId));
-});
+}).timeout(10000);

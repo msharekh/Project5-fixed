@@ -20,8 +20,8 @@ module.exports = {
     rinkeby: {
       provider: function() {
         return new HDWalletProvider(
-          'uphold picnic age aunt sheriff embody dune gauge merit hero purse innocent',
-          'https://rinkeby.infura.io/v3/141bd5d2a2d243a7aab8388795ffd2ea'
+          'pretty cricket pyramid weekend damage title cement achieve lumber glimpse whisper quit',
+          'https://rinkeby.infura.io/v3/141bd5d2a2d243a7aab8388795ffd2ea'          
         );
       },
       network_id: '4',
