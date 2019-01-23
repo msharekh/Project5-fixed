@@ -13,8 +13,29 @@ contract StarNotary is ERC721 {
 // #### ERC-721 Token Name: MSH StarNotary 
 // #### ERC-721 Token Symbol: MSH
 
-    string public  name = "MSH StarNotary";
-    string public  symbol ="MSH";
+    string public  name = "MAS StarNotary";
+    string public  symbol ="MAS";
+    uint8 public decimal = 18;
+    // uint256 public totalSupply = 1000000;
+    uint _totalSupply ;
+
+    // Balances for each account stored using a mapping
+    mapping(address => uint256) balances;
+
+    constructor() public {
+        uint amount =1000000;
+        _totalSupply = amount;
+        balances[msg.sender] = amount;
+    }
+
+    // Returns the total supply of tokens
+    function totalSupply() public view returns (uint256) {
+        return _totalSupply;
+    }
+
+    function balanceOf(address tokenOwner) public constant returns (uint balance) {
+        return balances[tokenOwner];
+    }
 
     function setName(string _name) public{
         name = _name;

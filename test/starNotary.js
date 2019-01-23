@@ -126,3 +126,11 @@ it('Lookup a star by ID using lookUptokenIdToStarInfo function', async () => {
   await instance.createStar(name, starId, { from: accounts[0] });
   assert.equal(name, await instance.lookUptokenIdToStarInfo(starId));
 }).timeout(10000);
+
+it('get balanca -test', async () => {
+  let user0 = accounts[0];
+  let balance = await instance.balanceOf(user0);
+  // assert.equal(name, await instance.lookUptokenIdToStarInfo(starId));
+  console.log(balance);
+
+}).timeout(10000);

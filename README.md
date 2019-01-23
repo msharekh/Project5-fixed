@@ -27,7 +27,7 @@ $ npm install --save truffle-hdwallet-provider
 
 #### ERC-721 Token Symbol: MSH
 
-#### Token Address on the Rinkeby Network: 0x3f6cf6d48ac542c1751587d9b2b7a90d30e03c2f 
+#### Token Address on the Rinkeby Network: 0x111b2216ffc98c3045d6e44a96f68452e212652a 
 
 
 ## functions:
