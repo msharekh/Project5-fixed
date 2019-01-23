@@ -23,9 +23,9 @@ $ npm install --save truffle-hdwallet-provider
 
 ## Important Info
 
-#### ERC-721 Token Name: MSH StarNotary
+#### ERC-721 Token Name: MAS StarNotary
 
-#### ERC-721 Token Symbol: MSH
+#### ERC-721 Token Symbol: MAS
 
 #### Token Address on the Rinkeby Network: 0x111b2216ffc98c3045d6e44a96f68452e212652a 
 
